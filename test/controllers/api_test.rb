@@ -18,4 +18,16 @@ class ApiTest < ActiveSupport::TestCase
     assert_equal 400, last_response.status
     assert_equal({"error"=>"values is invalid"}, JSON.parse(last_response.body))
   end
+
+  test 'test 3' do
+    get "/api/statuses/test_3.json", { values: %w(1 2 3 4) }
+    assert_equal 200, last_response.status
+    assert_equal [1,2,3,4], JSON.parse(last_response.body)
+  end
+
+  test 'test 4' do
+    get "/api/statuses/test_4.json", { values: %w(1 2 3 4) }
+    assert_equal 200, last_response.status
+    assert_equal ["1", "2", "3", "4"], JSON.parse(last_response.body)
+  end
 end

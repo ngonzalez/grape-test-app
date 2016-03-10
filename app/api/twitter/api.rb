@@ -19,6 +19,22 @@ module Twitter
       get :test_2 do
         params[:values]
       end
+
+      desc 'Test Method 3'
+      params do
+        requires :values, type: Array[Integer]
+      end
+      get :test_3 do
+        params[:values]
+      end
+
+      desc 'Test Method 4'
+      params do
+        requires :values, type: Array[String]
+      end
+      get :test_4 do
+        params[:values]
+      end
     end
   end
 end
