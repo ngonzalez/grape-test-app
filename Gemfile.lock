@@ -1,8 +1,9 @@
 GIT
   remote: git://github.com/ruby-grape/grape.git
-  revision: 2421db2cc4c9df236975f2ca864f78fbcee09a15
+  revision: 7411e2f8e0cc38fc6db703f53da06c6d010601a1
+  ref: 7411e2f8e0cc38fc6db703f53da06c6d010601a1
   specs:
-    grape (0.15.1)
+    grape (0.13.1)
       activesupport
       builder
       hashie (>= 2.1.0)
