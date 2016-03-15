@@ -9,25 +9,25 @@ class ApiTest < ActiveSupport::TestCase
 
   test 'test 1' do
     get "/api/statuses/test_1.json", { values: "1 2 3 4" }
-    assert_equal 200, last_response.status
     assert_equal [1,2,3,4], JSON.parse(last_response.body)
+    assert_equal 200, last_response.status
   end
 
   test 'test 2' do
     get "/api/statuses/test_2.json", { values: "1 2 3 4" }
-    assert_equal 200, last_response.status
     assert_equal [1,2,3,4], JSON.parse(last_response.body)
+    assert_equal 200, last_response.status
   end
 
   test 'test 3' do
     get "/api/statuses/test_3.json", { values: %w(1 2 3 4) }
-    assert_equal 200, last_response.status
     assert_equal [1,2,3,4], JSON.parse(last_response.body)
+    assert_equal 200, last_response.status
   end
 
   test 'test 4' do
     get "/api/statuses/test_4.json", { values: %w(1 2 3 4) }
-    assert_equal 200, last_response.status
     assert_equal ["1", "2", "3", "4"], JSON.parse(last_response.body)
+    assert_equal 200, last_response.status
   end
 end
